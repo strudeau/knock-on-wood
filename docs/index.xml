@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simon and Mortise</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>knock-on-wood/</link>
+      <atom:link href="knock-on-wood/index.xml" rel="self" type="application/rss+xml" />
     <description>Simon and Mortise</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 29 Feb 2020 14:00:56 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Simon and Mortise</title>
-      <link>/</link>
+      <link>knock-on-wood/</link>
     </image>
     
     <item>
       <title>My Adoc Post</title>
-      <link>/post/my-adoc-post/my-adoc-post/</link>
+      <link>knock-on-wood/post/my-adoc-post/my-adoc-post/</link>
       <pubDate>Sat, 29 Feb 2020 14:00:56 +0000</pubDate>
-      <guid>/post/my-adoc-post/my-adoc-post/</guid>
+      <guid>knock-on-wood/post/my-adoc-post/my-adoc-post/</guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_test&#34;&gt;Test&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
