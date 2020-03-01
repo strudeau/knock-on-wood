@@ -1,0 +1,71 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "My Adoc Post"
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+date: 2020-02-29T14:00:56Z
+lastmod: 2020-02-29T14:00:56Z
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+:stem: latexmath
+:icons: font
+
+== Test
+
+my content
+
+stem:[sqrt(4) = 2]
+
+Water (stem:[H_2O]) is a critical component.
+
+stem:[3\frac{1}{2}]
+
+.Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness
+[options="header"]
+|===
+| Wood Thickness B inches. | Screw Length inches.                            9+| Wood Thickness A inches. 
+|                          |                                                   | stem:[\color{red}{\boldsymbol{\frac{1}{2}}}]      | stem:[\color{red}{\boldsymbol{\frac{5}{8}}}]   | stem:[\color{red}{\boldsymbol{\frac{3}{4}}}]   | stem:[\color{red}{\boldsymbol{\frac{7}{8}}}]   | stem:[\color{red}{\boldsymbol{1}}]             | stem:[\color{red}{\boldsymbol{1\frac{1}{8}}}]  | stem:[\color{red}{\boldsymbol{1\frac{1}{4}}}] | stem:[\color{red}{\boldsymbol{1\frac{3}{8}}}] | stem:[\color{red}{\boldsymbol{1\frac{1}{2}}}] 
+| stem:[\frac{1}{2}]       | stem:[\color{red}{\boldsymbol{\frac{3}{4}}}]      | stem:[\colorbox{yellow}{$3\frac{3}{16}$}]         | stem:[3\frac{7}{16}]                           | stem:[3\frac{1}{32}]                           | stem:[3\frac{9}{32}]                           | stem:[4\frac{5}{32}]                           | stem:[4\frac{3}{32}]                           | stem:[4\frac{5}{8}]                           | stem:[4\frac{7}{8}]                           | stem:[5\frac{1}{8}] 
+| stem:[\frac{1}{2}]       | stem:[\color{red}{\boldsymbol{1}}]                | stem:[3\frac{1}{16}]                              | stem:[3\frac{5}{16}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4\frac{1}{32}]                           | stem:[4\frac{9}{32}]                           | stem:[4\frac{1}{2}]                           | stem:[4\frac{3}{4}]                           | stem:[5]            
+| stem:[\frac{5}{8}]       | stem:[\color{red}{\boldsymbol{1}}]                | stem:[3\frac{1}{16}]                              | stem:[3\frac{5}{16}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4\frac{1}{32}]                           | stem:[4\frac{9}{32}]                           | stem:[4\frac{1}{2}]                           | stem:[4\frac{3}{4}]                           | stem:[5]            
+| stem:[\frac{3}{4}]       | stem:[\color{red}{\boldsymbol{1\frac{1}{4}}}]     | stem:[2\frac{5}{16}]                              | stem:[3\frac{3}{16}]                           | stem:[3\frac{3}{32}]                           | stem:[3\frac{1}{32}]                           | stem:[3\frac{9}{32}]                           | stem:[4\frac{5}{32}]                           | stem:[4\frac{3}{8}]                           | stem:[4\frac{5}{8}]                           | stem:[4\frac{7}{8}] 
+| stem:[\frac{7}{8}]       | stem:[\color{red}{\boldsymbol{1\frac{1}{2}}}]     | stem:[2\frac{3}{16}]                              | stem:[3\frac{1}{16}]                           | stem:[3\frac{9}{32}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4\frac{1}{32}]                           | stem:[4\frac{1}{4}]                           | stem:[4\frac{1}{2}]                           | stem:[4\frac{3}{4}] 
+| stem:[1]                 | stem:[\color{red}{\boldsymbol{1\frac{1}{2}}}]     | stem:[2\frac{3}{16}]                              | stem:[3\frac{1}{16}]                           | stem:[3\frac{9}{32}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4\frac{1}{32}]                           | stem:[4\frac{1}{4}]                           | stem:[4\frac{1}{2}]                           | stem:[4\frac{3}{4}] 
+| stem:[1\frac{1}{4}]      | stem:[\color{red}{\boldsymbol{2}}]                | stem:[2\frac{9}{16}]                              | stem:[2\frac{3}{16}]                           | stem:[3\frac{1}{32}]                           | stem:[3\frac{9}{32}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4]                                      | stem:[4\frac{1}{4}]                           | stem:[4\frac{1}{2}] 
+| stem:[1\frac{3}{8}]      | stem:[\color{red}{\boldsymbol{2}}]                | stem:[2\frac{9}{16}]                              | stem:[2\frac{3}{16}]                           | stem:[3\frac{1}{32}]                           | stem:[3\frac{9}{32}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{5}{32}]                           | stem:[4]                                      | stem:[4\frac{1}{4}]                           | stem:[4\frac{1}{2}] 
+| stem:[1\frac{1}{2}]      | stem:[\color{red}{\boldsymbol{2\frac{1}{2}}}]     | stem:[2\frac{5}{16}]                              | stem:[2\frac{9}{16}]                           | stem:[2\frac{5}{32}]                           | stem:[3\frac{1}{32}]                           | stem:[3\frac{9}{32}]                           | stem:[3\frac{7}{32}]                           | stem:[3\frac{3}{4}]                           | stem:[4]                                      | stem:[\colorbox{yellow}{$4\frac{1}{4}$}] 
+|===
+
+my curious text
+
+icon:tags[role="blue"] ruby, asciidoctor
+
+NOTE: icon:exclamation-circle[] this is a note
+
+TIP: icon:exclamation[] this is a tip
+
+CAUTION: icon:exclamation-triangle[] this is a caution
+
+IMPORTANT: important
+
+WARNING: warning
