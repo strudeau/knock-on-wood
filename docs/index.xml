@@ -18,13 +18,13 @@
       <pubDate>Sat, 29 Feb 2020 14:00:56 +0000</pubDate>
       <guid>https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/</guid>
       <description>&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig^&amp;#174; Drill Guide Blocks (standard, Micro-Pocket^tm, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig^&amp;#174; but decided against because that was just one too many things to purchase for a &#34;small project&#34;. Turns out that the different drill guide blocks don&amp;#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg^&amp;#174; Easy-Set Pocket-Hole Drill Bit which does contain marking on the drill bit itself as to where to set the collar depth for three wood thickness, \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a [\frac{1}{2}] inch one (fictional use case)? I couldn&amp;#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk^&amp;#174; Fusion 360^TM to try to derive a mathematical model.&lt;/p&gt;
+&lt;p&gt;I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig&lt;sup&gt;&amp;#174;&lt;/sup&gt; Drill Guide Blocks (standard, Micro-Pocket&lt;sup&gt;TM&lt;/sup&gt;, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig&lt;sup&gt;&amp;#174;&lt;/sup&gt; but decided against because that was just one too many things to purchase for a &#34;small project&#34;. Turns out that the different drill guide blocks don&amp;#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg&lt;sup&gt;&amp;#174;&lt;/sup&gt; Easy-Set Pocket-Hole Drill Bit which does contain markings on the drill bit itself as to where to set the collar depth for three wood thickness, \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a \(\frac{1}{2}\) inch one (fictional use case)? I couldn&amp;#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk&lt;sup&gt;&amp;#174;&lt;/sup&gt; Fusion 360&lt;sup&gt;TM&lt;/sup&gt; to try to derive a mathematical model.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_mathematical_model&#34;&gt;Mathematical Model&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Using the Kreg^&amp;#174; Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy the setting for drill bit collar depth for:&lt;/p&gt;
+&lt;p&gt;Using the Kreg&lt;sup&gt;&amp;#174;&lt;/sup&gt; Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy the setting for drill bit collar depth for:&lt;/p&gt;
 &lt;/div&gt;
 &lt;table class=&#34;tableblock frame-all grid-all stretch&#34;&gt;
 &lt;caption class=&#34;title&#34;&gt;Table 1. Drill Bit Collar Depth in Inches as a function of Input Wood Thickness&lt;/caption&gt;
@@ -65,6 +65,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;But &lt;strong&gt;why&lt;/strong&gt; those specific drill bit collar depth, why not other values did I ask myself&amp;#8230;&amp;#8203; It must have something to do with the screw length. I reasonned that we would want the screw to exit out of the input wood piece at the mid point of the board&amp;#8217;s thickness and we would want half of the screw to be in the input board (A) and the other half into the &#34;destination&#34; board (B).&lt;/p&gt;
+&lt;/div&gt;
 &lt;table class=&#34;tableblock frame-all grid-all stretch&#34;&gt;
 &lt;caption class=&#34;title&#34;&gt;Table 2. Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness&lt;/caption&gt;
 &lt;colgroup&gt;

@@ -540,7 +540,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -577,13 +577,13 @@
 
     <div class="article-style">
       <div class="paragraph">
-<p>I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig^&#174; Drill Guide Blocks (standard, Micro-Pocket^tm, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig^&#174; but decided against because that was just one too many things to purchase for a "small project". Turns out that the different drill guide blocks don&#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg^&#174; Easy-Set Pocket-Hole Drill Bit which does contain marking on the drill bit itself as to where to set the collar depth for three wood thickness, \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a [\frac{1}{2}] inch one (fictional use case)? I couldn&#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk^&#174; Fusion 360^TM to try to derive a mathematical model.</p>
+<p>I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig<sup>&#174;</sup> Drill Guide Blocks (standard, Micro-Pocket<sup>TM</sup>, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig<sup>&#174;</sup> but decided against because that was just one too many things to purchase for a "small project". Turns out that the different drill guide blocks don&#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit which does contain markings on the drill bit itself as to where to set the collar depth for three wood thickness, \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a \(\frac{1}{2}\) inch one (fictional use case)? I couldn&#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk<sup>&#174;</sup> Fusion 360<sup>TM</sup> to try to derive a mathematical model.</p>
 </div>
 <div class="sect1">
 <h2 id="_mathematical_model">Mathematical Model</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the Kreg^&#174; Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy the setting for drill bit collar depth for:</p>
+<p>Using the Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy the setting for drill bit collar depth for:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Drill Bit Collar Depth in Inches as a function of Input Wood Thickness</caption>
@@ -624,6 +624,9 @@
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>But <strong>why</strong> those specific drill bit collar depth, why not other values did I ask myself&#8230;&#8203; It must have something to do with the screw length. I reasonned that we would want the screw to exit out of the input wood piece at the mid point of the board&#8217;s thickness and we would want half of the screw to be in the input board (A) and the other half into the "destination" board (B).</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness</caption>
 <colgroup>
