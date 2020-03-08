@@ -31,7 +31,7 @@
   <meta name="description" content="A mathematical model of how to adjust the Kreg Jig drill bit collar depth">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/">
+  <link rel="alternate" hreflang="en-us" href="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/">
 
   
 
@@ -216,7 +216,7 @@
   <link rel="icon" type="image/png" href="/simon-and-mortise/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/simon-and-mortise/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/">
+  <link rel="canonical" href="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/">
 
   
   
@@ -230,7 +230,7 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Simon and Mortise">
-  <meta property="og:url" content="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/">
+  <meta property="og:url" content="https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/">
   <meta property="og:title" content="Kreg Jig Drill Bit Collar Depth, A Mathematical Model | Simon and Mortise">
   <meta property="og:description" content="A mathematical model of how to adjust the Kreg Jig drill bit collar depth"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
@@ -262,7 +262,7 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/"
+    "@id": "https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/"
   },
   "headline": "Kreg Jig Drill Bit Collar Depth, A Mathematical Model",
   
@@ -540,7 +540,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    6 min read
   </span>
   
 
@@ -577,23 +577,25 @@
 
     <div class="article-style">
       <div class="paragraph">
-<p>I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig<sup>&#174;</sup> Drill Guide Blocks (standard, Micro-Pocket<sup>TM</sup>, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig<sup>&#174;</sup> but decided against because that was just one too many things to purchase for a "small project". Turns out that the different drill guide blocks don&#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit which does contain markings on the drill bit itself as to where to set the collar depth for three wood thickness, \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a \(\frac{1}{2}\) inch one (fictional use case)? I couldn&#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk<sup>&#174;</sup> Fusion 360<sup>TM</sup> to try to derive a mathematical model.</p>
+<p>I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig<sup>&#174;</sup> Drill Guide Blocks (standard, Micro-Pocket<sup>TM</sup>, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig<sup>&#174;</sup> but decided against because that was just one too many things to purchase for a "small project". Turns out that the different drill guide blocks don&#8217;t come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit which does contain markings on the drill bit itself as to where to set the collar depth for three wood thickness (in inches), \(\frac{1}{2}\), \(\frac{3}{4}\), \(1\frac{1}{2}\). But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a \(1\) inch board with a \(\frac{1}{2}\) inch one (fictional use case)? I couldn&#8217;t find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk<sup>&#174;</sup> Fusion 360<sup>TM</sup> to try to derive a mathematical model.</p>
 </div>
 <div class="sect1">
-<h2 id="_mathematical_model">Mathematical Model</h2>
+<h2 id="_model_the_situation">Model the Situation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy the setting for drill bit collar depth for:</p>
+<p>Using the Kreg<sup>&#174;</sup> Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy (\(\sim\frac{1}{16}\)) the setting for drill bit collar depth as well as the Kreg Jig<sup>&#174;</sup> Portable Base height setting for:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Drill Bit Collar Depth in Inches as a function of Input Wood Thickness</caption>
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Wood Thickness A inches.</th>
+<th class="tableblock halign-left valign-top">Kreg Jig<sup>&#174;</sup> height</th>
 <th class="tableblock halign-left valign-top">Drill Bit Collar Depth</th>
 </tr>
 </thead>
@@ -601,6 +603,9 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(\frac{1}{2}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(3\frac{3}{16}\)</p>
@@ -611,6 +616,9 @@
 <p>\(\frac{3}{4}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{3}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(3\frac{9}{16}\)</p>
 </div></div></td>
 </tr>
@@ -619,16 +627,278 @@
 <p>\(1\frac{1}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{4}\)</p>
+<p>\(5\frac{3}{8}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{1}{8}\)</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>But <strong>why</strong> those specific drill bit collar depth, why not other values did I ask myself&#8230;&#8203; It must have something to do with the screw length. I reasonned that we would want the screw to exit out of the input wood piece at the mid point of the board&#8217;s thickness and we would want half of the screw to be in the input board (A) and the other half into the "destination" board (B).</p>
+<p>But <strong>why</strong> those specific drill bit collar depth, why not other values did I ask myself&#8230;&#8203; It must have something to do with the screw length.</p>
+</div>
+<div class="paragraph">
+<p>I reasonned that we would want the screw to exit out of the input wood piece at the mid point of the board&#8217;s thickness and we would want half of the screw to be in the "input" board (A) and the other half into the "destination" board (B).</p>
+</div>
+<div class="paragraph">
+<p>According to all the documentation I could find out there and a quick check with a protractor, the angle at which the Pocket-Hole drill bit enters the wood is \(\bbox[yellow]{15^\circ}\).</p>
+</div>
+<div class="paragraph">
+<p>Modelling using Fusion 360<sup>TM</sup>, this gives the following:</p>
+</div>
+<div class="sect2">
+<h3 id="_material_thickness_frac12_screw_length_frac34">Material Thickness \(\frac{1}{2}\), Screw Length \(\frac{3}{4}\)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/75-pocket-hole%20Drawing.svg" alt="75 pocket hole Drawing">
+</div>
+<div class="title">Figure 1. Pocket-hole wood thickness 0,5 inch, screw length 0,75 inch</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There is a \(+\frac{3}{16}\) inch offset from center of screw.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_material_thickness_frac34_screw_length_1frac14">Material Thickness \(\frac{3}{4}\), Screw Length \(1\frac{1}{4}\)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/125-pocket-hole%20Drawing.svg" alt="125 pocket hole Drawing">
+</div>
+<div class="title">Figure 2. Pocket-hole wood thickness 0,75 inch, screw length 1,25 inches</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There is a \(-\frac{1}{16}\) inch offset from center of screw.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_material_thickness_1frac12_screw_length_2frac12">Material Thickness \(1\frac{1}{2}\), Screw Length \(2\frac{1}{2}\)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/250-pocket-hole%20Drawing.svg" alt="250 pocket hole Drawing">
+</div>
+<div class="title">Figure 3. Pocket-hole wood thickness 1,5 inches, screw length 2,5 inches</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+No offset.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_analysis">Analysis</h3>
+<div class="paragraph">
+<p>In order to maintain constant the height of the Kreg Jig<sup>&#174;</sup> Portable Base as well as the Drill Bit Collar Depth obtained through direct measurements, I uncovered that not always does half of the screw penetrates the "destination" board such as for \(\frac{1}{2}\) and \(\frac{3}{4}\) material. In order for the drill hole to go through the center of the board, the screw must be pulled out or digged through the center by a certain offset on certain occasions. I suspect this is to accomodate cases such as for \(\frac{1}{2}\) boards where a \(\frac{3}{4}\) or \(1\) inch screw can be used.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_calculating_the_drill_bit_collar_depth_as_a_function_of_the_screw_length_and_input_board_material_thickness">Calculating the Drill Bit Collar Depth as a Function of the Screw Length and Input Board Material Thickness</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now on to what we were looking to find&#8230;&#8203; Given an input board (A) and destination board (B) of different thickness, what is the Drill Bit Collar depth value I must use?</p>
+</div>
+<div class="paragraph">
+<p>A few things to consider:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Kreg Jig<sup>&#174;</sup> Portable Base height setting is define by the input board thickness given that we want to drill through the middle of the input board.</p>
+</li>
+<li>
+<p>The drill bit collar depth depends on how much length of the screw remains in the input board.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We can model this situation as a system of equations</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/triangle.png" alt="triangle">
+</div>
+<div class="title">Figure 4. triangle modeling</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{array}{rcl}
+m                &amp;=&amp;       \text{input board material thickness. e.g.:} \frac{1}{2} \\
+s                &amp;=&amp;       \text{screw length e.g.:} \frac{3}{4} \\
+o                &amp;\approx&amp; \text{screw offset e.g.:} \frac{3}{16} \\
+\lvert{AD}\rvert &amp;\approx&amp; \text{drill bit collar depth e.g.:} 3\frac{3}{16} \\
+\lvert{EB}\rvert &amp;=&amp;       (\frac{s}{2} + o)\cos(75^\circ) \\
+\lvert{FD}\rvert &amp;\approx&amp; \lvert{AD}\rvert\sin(15^\circ) \\
+\lvert{CG}\rvert &amp;=&amp;       \text{distance between A and right edge of the block, a constant} \\
+                 &amp;=&amp;       \lvert{FD}\rvert - (\frac{m}{2} - \lvert{EB}\rvert) \\
+                 &amp;=&amp;       \lvert{AD}\rvert\sin(15^\circ) - (\frac{m}{2} - (\frac{s}{2} + o)\cos(75^\circ)) \\
+\end{array}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Using \(\lvert{CG}\rvert\), we can express the drill bit collar depth (\(\lvert{AD}\rvert = d^\prime\)) as a function of screw length \(s\) and input board thickness \(m\).</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{array}{rcl}
+d &amp;=&amp; \frac{\lvert{CG}\rvert + (\frac{m}{2} - (\frac{s}{2} + o)\cos(75^\circ))}{\sin(15^\circ)}
+\end{array}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Testing our equations using our measured values:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness</caption>
+<caption class="title">Table 2. Drill Bit Collar Depth \(d\) in Inches as a Function of Screw Length and Input Wood Thickness</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">\(m\)</th>
+<th class="tableblock halign-left valign-top">\(s\)</th>
+<th class="tableblock halign-left valign-top">\(o\)</th>
+<th class="tableblock halign-left valign-top">\(\lvert{AD}\rvert\)</th>
+<th class="tableblock halign-left valign-top">\(\lvert{CG}\rvert\)</th>
+<th class="tableblock halign-left valign-top">\(\lfloor{\lvert{CG}\rvert}\rceil\)</th>
+<th class="tableblock halign-left valign-top">\(d\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{1}{2}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{3}{4}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(+\frac{3}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{3}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{49}{68}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{23}{32}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{3}{16}\)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{3}{4}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(1\frac{1}{4}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(-\frac{1}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{9}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{9}{13}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{11}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{9}{16}\)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(1\frac{1}{2}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(2\frac{1}{2}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(0\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{1}{8}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{25}{39}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\frac{21}{32}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{1}{8}\)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>We notice that although \(\lvert{CG}\rvert\) should have been constant, it is not. Probably the measurement of my reference drill bit collar depth \(\lvert{AD}\rvert\) is not accurate enough. This value varies from \(\frac{21}{32}\) to \(\frac{23}{32}\), thus since this is a constant, I will be using the following value moving forward:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{array}{rcl}
+\lvert{CG}\rvert &amp;\approx&amp; \frac{22}{32}
+\end{array}\]
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drill_bit_collar_depth_in_inches_as_a_function_of_screw_length_and_input_wood_thickness">Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the equations we derived above, we can now express the Drill Bit Collar Depth as a function of the screw Length and input board material thickness. A few assumptions:</p>
+</div>
+<div class="paragraph">
+<p>Unless directly measured, I will use those values.</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{array}{rcl}
+o                &amp;\approx&amp; 0 \\
+\lvert{CG}\rvert &amp;\approx&amp; \frac{22}{32}
+\end{array}\]
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness in Inches rounded to \(\frac{1}{16}\) of an inch.</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -644,9 +914,9 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Wood Thickness B inches.</th>
-<th class="tableblock halign-left valign-top">Screw Length inches.</th>
-<th class="tableblock halign-left valign-top" colspan="9">Wood Thickness A inches.</th>
+<th class="tableblock halign-left valign-top">Destination Board Wood Thickness in Inches</th>
+<th class="tableblock halign-left valign-top">Screw Length in Inches</th>
+<th class="tableblock halign-left valign-top" colspan="9">Input Board Wood Thickness in Inches</th>
 </tr>
 </thead>
 <tbody>
@@ -654,31 +924,31 @@
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{\frac{1}{2}}}\)</p>
+<p>\(\color{red}{\frac{1}{2}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{\frac{5}{8}}}\)</p>
+<p>\(\color{red}{\frac{5}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{\frac{3}{4}}}\)</p>
+<p>\(\color{red}{\frac{3}{4}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{\frac{7}{8}}}\)</p>
+<p>\(\color{red}{\frac{7}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1}}\)</p>
+<p>\(\color{red}{1}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{8}}}\)</p>
+<p>\(\color{red}{1\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{4}}}\)</p>
+<p>\(\color{red}{1\frac{1}{4}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{3}{8}}}\)</p>
+<p>\(\color{red}{1\frac{3}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{2}}}\)</p>
+<p>\(\color{red}{1\frac{1}{2}}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -686,7 +956,7 @@
 <p>\(\frac{1}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{\frac{3}{4}}}\)</p>
+<p>\(\color{red}{\frac{3}{4}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(\bbox[yellow]{3\frac{3}{16}}\)</p>
@@ -695,16 +965,16 @@
 <p>\(3\frac{7}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{32}\)</p>
+<p>\(3\frac{11}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{15}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{5}{32}\)</p>
+<p>\(4\frac{1}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{32}\)</p>
+<p>\(4\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(4\frac{5}{8}\)</p>
@@ -718,72 +988,37 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\frac{1}{2}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1}}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{16}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{16}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{32}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{9}{32}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{4}\)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(5\)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>\(\frac{5}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1}}\)</p>
+<p>\(\color{red}{1}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{16}\)</p>
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{16}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{5}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
+<p>\(3\frac{7}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{32}\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{9}{32}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
+<p>\(4\frac{9}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{4}\)</p>
+<p>\(4\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(5\)</p>
+<p>\(5\frac{1}{16}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -791,34 +1026,34 @@
 <p>\(\frac{3}{4}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{4}}}\)</p>
+<p>\(\color{red}{1\frac{1}{4}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{5}{16}\)</p>
+<p>\(\xcancel{3\frac{1}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{3}{16}\)</p>
+<p>\(3\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{3}{32}\)</p>
+<p>\(\bbox[yellow]{3\frac{9}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{32}\)</p>
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{5}{32}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{8}\)</p>
+<p>\(4\frac{1}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{5}{8}\)</p>
+<p>\(4\frac{3}{4}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{7}{8}\)</p>
+<p>\(5\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -826,34 +1061,34 @@
 <p>\(\frac{7}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{2}}}\)</p>
+<p>\(\color{red}{1\frac{1}{2}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{3}{16}\)</p>
+<p>\(\xcancel{2\frac{7}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{16}\)</p>
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{5}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{32}\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{4}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
+<p>\(4\frac{9}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{4}\)</p>
+<p>\(4\frac{13}{16}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -861,34 +1096,69 @@
 <p>\(1\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{1\frac{1}{2}}}\)</p>
+<p>\(\color{red}{1\frac{1}{2}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{3}{16}\)</p>
+<p>\(\xcancel{2\frac{7}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{16}\)</p>
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{5}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{32}\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{4}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
+<p>\(4\frac{9}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{3}{4}\)</p>
+<p>\(4\frac{13}{16}\)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(1\frac{1}{8}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\color{red}{1\frac{1}{2}}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\xcancel{2\frac{7}{8}}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{3}{8}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{5}{8}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(3\frac{13}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{1}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{5}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{9}{16}\)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\(4\frac{13}{16}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -896,34 +1166,34 @@
 <p>\(1\frac{1}{4}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{2}}\)</p>
+<p>\(\color{red}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{9}{16}\)</p>
+<p>\(\xcancel{2\frac{5}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{3}{16}\)</p>
+<p>\(\xcancel{2\frac{7}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{32}\)</p>
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{9}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{4}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
+<p>\(4\frac{9}{16}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -931,34 +1201,34 @@
 <p>\(1\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{2}}\)</p>
+<p>\(\color{red}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{9}{16}\)</p>
+<p>\(\xcancel{2\frac{5}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{3}{16}\)</p>
+<p>\(\xcancel{2\frac{7}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{32}\)</p>
+<p>\(\xcancel{3\frac{1}{8}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{9}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{5}{32}\)</p>
+<p>\(3\frac{13}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\)</p>
+<p>\(4\frac{1}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{4}\)</p>
+<p>\(4\frac{5}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\frac{1}{2}\)</p>
+<p>\(4\frac{9}{16}\)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -966,38 +1236,75 @@
 <p>\(1\frac{1}{2}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\color{red}{\boldsymbol{2\frac{1}{2}}}\)</p>
+<p>\(\color{red}{2\frac{1}{2}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{5}{16}\)</p>
+<p>\(\xcancel{2\frac{3}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{9}{16}\)</p>
+<p>\(\xcancel{2\frac{7}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(2\frac{5}{32}\)</p>
+<p>\(\xcancel{2\frac{11}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{1}{32}\)</p>
+<p>\(\xcancel{2\frac{15}{16}}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{9}{32}\)</p>
+<p>\(3\frac{3}{16}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{7}{32}\)</p>
+<p>\(3\frac{3}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(3\frac{3}{4}\)</p>
+<p>\(3\frac{5}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(4\)</p>
+<p>\(3\frac{7}{8}\)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>\(\bbox[yellow]{4\frac{1}{4}}\)</p>
+<p>\(\bbox[yellow]{4\frac{1}{8}}\)</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Drill Bit Collar Depth smaller than \(3\frac{3}{16}\) are crossed out because they are not valid values because smaller values than that and your drill bit is not even going through the jig drill block at all!</p>
+</div>
+<div class="paragraph">
+<p>The screw length corresponding to the destination board thickness were obtained from: <a href="https://www.kregtool.com/about-us/news/kreg-tool-tips-joining/choose-the-correct-screw-length.aspx" class="bare">https://www.kregtool.com/about-us/news/kreg-tool-tips-joining/choose-the-correct-screw-length.aspx</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Keep in mind that the values in the table above are <strong>estimates</strong> and you should treat them as such. They are obtained by calculation, measurements and contain a fair bit of uncertainties and guesswork. They <strong>DO NOT</strong> represent your jig&#8217;s manufacturer recommendations. If you are building anything in a professional capacity or that must comply with building regulations, for example, <strong>DO NOT</strong> use those values and contact your jig&#8217;s manufacturer for the exact information.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I hope this is useful to other people than myself.</p>
+</div>
 </div>
 </div>
 
@@ -1022,7 +1329,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/&amp;text=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/&amp;text=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1035,7 +1342,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/&amp;t=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/&amp;t=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1048,7 +1355,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model&amp;body=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model&amp;body=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1061,7 +1368,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/&amp;title=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/&amp;title=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1074,7 +1381,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model%20https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model%20https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1087,7 +1394,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/kreg-jib-collar-depth/&amp;title=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://strudeau.github.io/simon-and-mortise/post/kreg-jig-collar-depth/&amp;title=Kreg%20Jig%20Drill%20Bit%20Collar%20Depth,%20A%20Mathematical%20Model" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

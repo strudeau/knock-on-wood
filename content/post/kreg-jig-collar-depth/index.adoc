@@ -1,0 +1,177 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Kreg Jig Drill Bit Collar Depth, A Mathematical Model"
+subtitle: ""
+summary: "A mathematical model of how to adjust the Kreg Jig drill bit collar depth"
+authors: []
+tags: []
+categories: []
+date: 2020-02-29T14:00:56Z
+lastmod: 2020-02-29T14:00:56Z
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+:stem: latexmath
+:icons: font
+:imagesdir: images
+
+I am quite new to woodworking and have had in mind of building bedroom furnitures using pocket-hole joinery. Fast, easy, reliable, I bough all three Kreg Jig^(R)^ Drill Guide Blocks (standard, Micro-Pocket^TM^, HD) that can fit in the Portable Base adapter. I though about buying a K4 Kreg Jig^(R)^ but decided against because that was just one too many things to purchase for a "small project". Turns out that the different drill guide blocks don't come with clear instructions when it comes to setting the drill bit collar depth. Good thing I had purchased a Kreg^(R)^ Easy-Set Pocket-Hole Drill Bit which does contain markings on the drill bit itself as to where to set the collar depth for three wood thickness (in inches), stem:[\frac{1}{2}], stem:[\frac{3}{4}], stem:[1\frac{1}{2}]. But what about the other wood thickness, did I ask myself? Also, in all the instructions manuals I read, they were all assuming you would be joining pieces of wood of equal thickness. What about if I want to join a stem:[1] inch board with a stem:[\frac{1}{2}] inch one (fictional use case)? I couldn't find anywhere clear guiding instructions on how to set the drill bit for that use case. So I ended up modelling my use case using Autodesk^(R)^ Fusion 360^TM^ to try to derive a mathematical model.
+
+== Model the Situation
+
+Using the Kreg^(R)^ Easy-Set Pocket-Hole Drill Bit I could find with reasonnable accuracy (stem:[\sim\frac{1}{16}]) the setting for drill bit collar depth as well as the Kreg Jig^(R)^ Portable Base height setting for:
+
+.Drill Bit Collar Depth in Inches as a function of Input Wood Thickness
+[cols="a,a,a", options="header"]
+|===
+| Wood Thickness A inches. | Kreg Jig^(R)^ height | Drill Bit Collar Depth
+| stem:[\frac{1}{2}]       | stem:[3\frac{13}{16}]  | stem:[3\frac{3}{16}]
+| stem:[\frac{3}{4}]       | stem:[4\frac{3}{16}] | stem:[3\frac{9}{16}]
+| stem:[1\frac{1}{2}]      | stem:[5\frac{3}{8}]  | stem:[4\frac{1}{8}]
+|===
+
+But *why* those specific drill bit collar depth, why not other values did I ask myself... It must have something to do with the screw length. 
+
+I reasonned that we would want the screw to exit out of the input wood piece at the mid point of the board's thickness and we would want half of the screw to be in the "input" board (A) and the other half into the "destination" board (B).
+
+According to all the documentation I could find out there and a quick check with a protractor, the angle at which the Pocket-Hole drill bit enters the wood is stem:[\bbox[yellow\]{15^\circ}].
+
+Modelling using Fusion 360^TM^, this gives the following:
+
+=== Material Thickness stem:[\frac{1}{2}], Screw Length stem:[\frac{3}{4}] 
+
+image::75-pocket-hole Drawing.svg[title="Pocket-hole wood thickness 0,5 inch, screw length 0,75 inch"]
+
+NOTE: There is a stem:[+\frac{3}{16}] inch offset from center of screw.
+
+=== Material Thickness stem:[\frac{3}{4}], Screw Length stem:[1\frac{1}{4}] 
+
+image::125-pocket-hole Drawing.svg[title="Pocket-hole wood thickness 0,75 inch, screw length 1,25 inches"]
+
+NOTE: There is a stem:[-\frac{1}{16}] inch offset from center of screw.
+
+=== Material Thickness stem:[1\frac{1}{2}], Screw Length stem:[2\frac{1}{2}] 
+
+image::250-pocket-hole Drawing.svg[title="Pocket-hole wood thickness 1,5 inches, screw length 2,5 inches"]
+
+NOTE: No offset.
+
+=== Analysis
+
+In order to maintain constant the height of the Kreg Jig^(R)^ Portable Base as well as the Drill Bit Collar Depth obtained through direct measurements, I uncovered that not always does half of the screw penetrates the "destination" board such as for stem:[\frac{1}{2}] and stem:[\frac{3}{4}] material. In order for the drill hole to go through the center of the board, the screw must be pulled out or digged through the center by a certain offset on certain occasions. I suspect this is to accomodate cases such as for stem:[\frac{1}{2}] boards where a stem:[\frac{3}{4}] or stem:[1] inch screw can be used.
+
+== Calculating the Drill Bit Collar Depth as a Function of the Screw Length and Input Board Material Thickness
+
+Now on to what we were looking to find... Given an input board (A) and destination board (B) of different thickness, what is the Drill Bit Collar depth value I must use? 
+
+A few things to consider:
+
+* The Kreg Jig^(R)^ Portable Base height setting is define by the input board thickness given that we want to drill through the middle of the input board.
+* The drill bit collar depth depends on how much length of the screw remains in the input board.
+
+We can model this situation as a system of equations
+
+image::triangle.png[title="triangle modeling"]
+
+[stem]
+++++
+\begin{array}{rcl}
+m                &=&       \text{input board material thickness. e.g.:} \frac{1}{2} \\
+s                &=&       \text{screw length e.g.:} \frac{3}{4} \\
+o                &\approx& \text{screw offset e.g.:} \frac{3}{16} \\
+\lvert{AD}\rvert &\approx& \text{drill bit collar depth e.g.:} 3\frac{3}{16} \\
+\lvert{EB}\rvert &=&       (\frac{s}{2} + o)\cos(75^\circ) \\
+\lvert{FD}\rvert &\approx& \lvert{AD}\rvert\sin(15^\circ) \\
+\lvert{CG}\rvert &=&       \text{distance between A and right edge of the block, a constant} \\
+                 &=&       \lvert{FD}\rvert - (\frac{m}{2} - \lvert{EB}\rvert) \\
+                 &=&       \lvert{AD}\rvert\sin(15^\circ) - (\frac{m}{2} - (\frac{s}{2} + o)\cos(75^\circ)) \\
+\end{array}
+++++
+
+Using stem:[\lvert{CG}\rvert], we can express the drill bit collar depth (stem:[\lvert{AD}\rvert = d^\prime]) as a function of screw length stem:[s] and input board thickness stem:[m]. 
+
+[stem]
+++++
+\begin{array}{rcl}
+d &=& \frac{\lvert{CG}\rvert + (\frac{m}{2} - (\frac{s}{2} + o)\cos(75^\circ))}{\sin(15^\circ)}
+\end{array}
+++++
+
+Testing our equations using our measured values:
+
+.Drill Bit Collar Depth stem:[d] in Inches as a Function of Screw Length and Input Wood Thickness
+[cols="a,a,a,a,a,a,a", options="header"]
+|===
+| stem:[m]            | stem:[s]            | stem:[o]             | stem:[\lvert{AD}\rvert] | stem:[\lvert{CG}\rvert] | stem:[\lfloor{\lvert{CG}\rvert}\rceil] | stem:[d]      
+| stem:[\frac{1}{2}]  | stem:[\frac{3}{4}]  | stem:[+\frac{3}{16}] | stem:[3\frac{3}{16}]    | stem:[\frac{49}{68}]    | stem:[\frac{23}{32}]                   | stem:[3\frac{3}{16}] 
+| stem:[\frac{3}{4}]  | stem:[1\frac{1}{4}] | stem:[-\frac{1}{16}] | stem:[3\frac{9}{16}]    | stem:[\frac{9}{13}]     | stem:[\frac{11}{16}]                   | stem:[3\frac{9}{16}] 
+| stem:[1\frac{1}{2}] | stem:[2\frac{1}{2}] | stem:[0]             | stem:[4\frac{1}{8}]     | stem:[\frac{25}{39}]    | stem:[\frac{21}{32}]                   | stem:[4\frac{1}{8}]  
+|===
+
+We notice that although stem:[\lvert{CG}\rvert] should have been constant, it is not. Probably the measurement of my reference drill bit collar depth stem:[\lvert{AD}\rvert] is not accurate enough. This value varies from stem:[\frac{21}{32}] to stem:[\frac{23}{32}], thus since this is a constant, I will be using the following value moving forward:
+
+[stem]
+++++
+\begin{array}{rcl}
+\lvert{CG}\rvert &\approx& \frac{22}{32}
+\end{array}
+++++
+
+== Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness
+
+Using the equations we derived above, we can now express the Drill Bit Collar Depth as a function of the screw Length and input board material thickness. A few assumptions:
+
+Unless directly measured, I will use those values.
+
+[stem]
+++++
+\begin{array}{rcl}
+o                &\approx& 0 \\
+\lvert{CG}\rvert &\approx& \frac{22}{32}
+\end{array}
+++++
+
+.Drill Bit Collar Depth in Inches as a Function of Screw Length and Input Wood Thickness in Inches rounded to stem:[\frac{1}{16}] of an inch.
+[cols="a,a,a,a,a,a,a,a,a,a,a", options="header"]
+|===
+| Destination Board Wood Thickness in Inches | Screw Length in Inches         9+| Input Board Wood Thickness in Inches
+|                                            |                                  | stem:[\color{red}{\frac{1}{2}}]                   | stem:[\color{red}{\frac{5}{8}}]   | stem:[\color{red}{\frac{3}{4}}]      | stem:[\color{red}{\frac{7}{8}}]    | stem:[\color{red}{1}] | stem:[\color{red}{1\frac{1}{8}}] | stem:[\color{red}{1\frac{1}{4}}] | stem:[\color{red}{1\frac{3}{8}}] | stem:[\color{red}{1\frac{1}{2}}]   
+| stem:[\frac{1}{2}]                         | stem:[\color{red}{\frac{3}{4}}]  | stem:[\bbox[yellow\]{3\frac{3}{16}}]              | stem:[3\frac{7}{16}]              | stem:[3\frac{11}{16}]                | stem:[3\frac{15}{16}]              | stem:[4\frac{1}{8}]   | stem:[4\frac{3}{8}]              | stem:[4\frac{5}{8}]              | stem:[4\frac{7}{8}]              | stem:[5\frac{1}{8}]                
+| stem:[\frac{5}{8}]                         | stem:[\color{red}{1}]            | stem:[\xcancel{3\frac{1}{8}}]                  | stem:[3\frac{3}{8}]               | stem:[3\frac{5}{8}]                  | stem:[3\frac{7}{8}]                | stem:[4\frac{1}{16}]  | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]             | stem:[4\frac{13}{16}]            | stem:[5\frac{1}{16}]               
+| stem:[\frac{3}{4}]                         | stem:[\color{red}{1\frac{1}{4}}] | stem:[\xcancel{3\frac{1}{16}}]                 | stem:[3\frac{5}{16}]              | stem:[\bbox[yellow\]{3\frac{9}{16}}] | stem:[3\frac{13}{16}]              | stem:[4\frac{1}{16}]  | stem:[4\frac{5}{16}]             | stem:[4\frac{1}{2}]              | stem:[4\frac{3}{4}]              | stem:[5]                           
+| stem:[\frac{7}{8}]                         | stem:[\color{red}{1\frac{1}{2}}] | stem:[\xcancel{2\frac{7}{8}}]                  | stem:[\xcancel{3\frac{1}{8}}]  | stem:[3\frac{3}{8}]                  | stem:[3\frac{5}{8}]                | stem:[3\frac{13}{16}] | stem:[4\frac{1}{16}]             | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]             | stem:[4\frac{13}{16}]              
+| stem:[1]                                   | stem:[\color{red}{1\frac{1}{2}}] | stem:[\xcancel{2\frac{7}{8}}]                  | stem:[\xcancel{3\frac{1}{8}}]  | stem:[3\frac{3}{8}]                  | stem:[3\frac{5}{8}]                | stem:[3\frac{13}{16}] | stem:[4\frac{1}{16}]             | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]             | stem:[4\frac{13}{16}]              
+| stem:[1\frac{1}{8}]                        | stem:[\color{red}{1\frac{1}{2}}] | stem:[\xcancel{2\frac{7}{8}}]                  | stem:[\xcancel{3\frac{1}{8}}]  | stem:[3\frac{3}{8}]                  | stem:[3\frac{5}{8}]                | stem:[3\frac{13}{16}] | stem:[4\frac{1}{16}]             | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]             | stem:[4\frac{13}{16}]              
+| stem:[1\frac{1}{4}]                        | stem:[\color{red}{2}]            | stem:[\xcancel{2\frac{5}{8}}]                  | stem:[\xcancel{2\frac{7}{8}}]  | stem:[\xcancel{3\frac{1}{8}}]     | stem:[3\frac{3}{8}]                | stem:[3\frac{9}{16}]  | stem:[3\frac{13}{16}]            | stem:[4\frac{1}{16}]             | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]               
+| stem:[1\frac{3}{8}]                        | stem:[\color{red}{2}]            | stem:[\xcancel{2\frac{5}{8}}]                  | stem:[\xcancel{2\frac{7}{8}}]  | stem:[\xcancel{3\frac{1}{8}}]     | stem:[3\frac{3}{8}]                | stem:[3\frac{9}{16}]  | stem:[3\frac{13}{16}]            | stem:[4\frac{1}{16}]             | stem:[4\frac{5}{16}]             | stem:[4\frac{9}{16}]               
+| stem:[1\frac{1}{2}]                        | stem:[\color{red}{2\frac{1}{2}}] | stem:[\xcancel{2\frac{3}{16}}]                 | stem:[\xcancel{2\frac{7}{16}}] | stem:[\xcancel{2\frac{11}{16}}]   | stem:[\xcancel{2\frac{15}{16}}] | stem:[3\frac{3}{16}]  | stem:[3\frac{3}{8}]              | stem:[3\frac{5}{8}]              | stem:[3\frac{7}{8}]              | stem:[\bbox[yellow\]{4\frac{1}{8}}]
+|===
+
+[NOTE]
+====
+Drill Bit Collar Depth smaller than stem:[3\frac{3}{16}] are crossed out because they are not valid values because smaller values than that and your drill bit is not even going through the jig drill block at all!
+
+The screw length corresponding to the destination board thickness were obtained from: https://www.kregtool.com/about-us/news/kreg-tool-tips-joining/choose-the-correct-screw-length.aspx 
+====
+
+WARNING: Keep in mind that the values in the table above are *estimates* and you should treat them as such. They are obtained by calculation, measurements and contain a fair bit of uncertainties and guesswork. They *DO NOT* represent your jig's manufacturer recommendations. If you are building anything in a professional capacity or that must comply with building regulations, for example, *DO NOT* use those values and contact your jig's manufacturer for the exact information.
+
+== Conclusion
+
+I hope this is useful to other people than myself. 
